@@ -14,3 +14,5 @@ for folders, subfolders, filenames in os.walk(path):
         if filename.endswith('{}'.format(ext)):
             shutil.copy(os.path.join(folders, filename), destination)
 
+print('Selective copy has finished, all files with ', ext,'type have been copied from ', os.path.basename(path), 'to',
+      os.path.basename(destination))
